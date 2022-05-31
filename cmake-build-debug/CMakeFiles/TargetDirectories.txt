@@ -1,0 +1,3 @@
+D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir
+D:/UNI/curs/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/UNI/curs/cmake-build-debug/CMakeFiles/rebuild_cache.dir
