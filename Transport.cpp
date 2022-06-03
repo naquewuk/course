@@ -19,7 +19,7 @@ std::string Transport::Info() const
        << "\nModel: " << model
        << "\nMax Speed of " << brand << ": " << maxspeed
        << "\nFuel Consumption(per 100 km): " << fuelconsumption
-       << "\nWeight of " << brand << "is about: " << weight;
+       << "\nWeight of " << brand << " is about: " << weight;
 
     return ss.str();
 }

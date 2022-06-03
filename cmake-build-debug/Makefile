@@ -128,6 +128,54 @@ curs/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/build
 .PHONY : curs/fast
 
+Bus.obj: Bus.cpp.obj
+.PHONY : Bus.obj
+
+# target to build an object file
+Bus.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Bus.cpp.obj
+.PHONY : Bus.cpp.obj
+
+Bus.i: Bus.cpp.i
+.PHONY : Bus.i
+
+# target to preprocess a source file
+Bus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Bus.cpp.i
+.PHONY : Bus.cpp.i
+
+Bus.s: Bus.cpp.s
+.PHONY : Bus.s
+
+# target to generate assembly for a file
+Bus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Bus.cpp.s
+.PHONY : Bus.cpp.s
+
+Motorcycle.obj: Motorcycle.cpp.obj
+.PHONY : Motorcycle.obj
+
+# target to build an object file
+Motorcycle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Motorcycle.cpp.obj
+.PHONY : Motorcycle.cpp.obj
+
+Motorcycle.i: Motorcycle.cpp.i
+.PHONY : Motorcycle.i
+
+# target to preprocess a source file
+Motorcycle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Motorcycle.cpp.i
+.PHONY : Motorcycle.cpp.i
+
+Motorcycle.s: Motorcycle.cpp.s
+.PHONY : Motorcycle.s
+
+# target to generate assembly for a file
+Motorcycle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Motorcycle.cpp.s
+.PHONY : Motorcycle.cpp.s
+
 Transport.obj: Transport.cpp.obj
 .PHONY : Transport.obj
 
@@ -151,6 +199,30 @@ Transport.s: Transport.cpp.s
 Transport.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Transport.cpp.s
 .PHONY : Transport.cpp.s
+
+Truck.obj: Truck.cpp.obj
+.PHONY : Truck.obj
+
+# target to build an object file
+Truck.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Truck.cpp.obj
+.PHONY : Truck.cpp.obj
+
+Truck.i: Truck.cpp.i
+.PHONY : Truck.i
+
+# target to preprocess a source file
+Truck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Truck.cpp.i
+.PHONY : Truck.cpp.i
+
+Truck.s: Truck.cpp.s
+.PHONY : Truck.s
+
+# target to generate assembly for a file
+Truck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Truck.cpp.s
+.PHONY : Truck.cpp.s
 
 Vehicle.obj: Vehicle.cpp.obj
 .PHONY : Vehicle.obj
@@ -209,9 +281,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... curs
+	@echo ... Bus.obj
+	@echo ... Bus.i
+	@echo ... Bus.s
+	@echo ... Motorcycle.obj
+	@echo ... Motorcycle.i
+	@echo ... Motorcycle.s
 	@echo ... Transport.obj
 	@echo ... Transport.i
 	@echo ... Transport.s
+	@echo ... Truck.obj
+	@echo ... Truck.i
+	@echo ... Truck.s
 	@echo ... Vehicle.obj
 	@echo ... Vehicle.i
 	@echo ... Vehicle.s

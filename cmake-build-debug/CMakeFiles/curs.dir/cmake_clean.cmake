@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/curs.dir/Bus.cpp.obj"
+  "CMakeFiles/curs.dir/Motorcycle.cpp.obj"
   "CMakeFiles/curs.dir/Transport.cpp.obj"
+  "CMakeFiles/curs.dir/Truck.cpp.obj"
   "CMakeFiles/curs.dir/Vehicle.cpp.obj"
   "CMakeFiles/curs.dir/main.cpp.obj"
   "curs.exe"

@@ -104,11 +104,53 @@ CMakeFiles/curs.dir/Vehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/curs.dir/Vehicle.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UNI\curs\Vehicle.cpp -o CMakeFiles\curs.dir\Vehicle.cpp.s
 
+CMakeFiles/curs.dir/Motorcycle.cpp.obj: CMakeFiles/curs.dir/flags.make
+CMakeFiles/curs.dir/Motorcycle.cpp.obj: ../Motorcycle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UNI\curs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/curs.dir/Motorcycle.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\curs.dir\Motorcycle.cpp.obj -c D:\UNI\curs\Motorcycle.cpp
+
+CMakeFiles/curs.dir/Motorcycle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/curs.dir/Motorcycle.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UNI\curs\Motorcycle.cpp > CMakeFiles\curs.dir\Motorcycle.cpp.i
+
+CMakeFiles/curs.dir/Motorcycle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/curs.dir/Motorcycle.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UNI\curs\Motorcycle.cpp -o CMakeFiles\curs.dir\Motorcycle.cpp.s
+
+CMakeFiles/curs.dir/Truck.cpp.obj: CMakeFiles/curs.dir/flags.make
+CMakeFiles/curs.dir/Truck.cpp.obj: ../Truck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UNI\curs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/curs.dir/Truck.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\curs.dir\Truck.cpp.obj -c D:\UNI\curs\Truck.cpp
+
+CMakeFiles/curs.dir/Truck.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/curs.dir/Truck.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UNI\curs\Truck.cpp > CMakeFiles\curs.dir\Truck.cpp.i
+
+CMakeFiles/curs.dir/Truck.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/curs.dir/Truck.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UNI\curs\Truck.cpp -o CMakeFiles\curs.dir\Truck.cpp.s
+
+CMakeFiles/curs.dir/Bus.cpp.obj: CMakeFiles/curs.dir/flags.make
+CMakeFiles/curs.dir/Bus.cpp.obj: ../Bus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UNI\curs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/curs.dir/Bus.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\curs.dir\Bus.cpp.obj -c D:\UNI\curs\Bus.cpp
+
+CMakeFiles/curs.dir/Bus.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/curs.dir/Bus.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UNI\curs\Bus.cpp > CMakeFiles\curs.dir\Bus.cpp.i
+
+CMakeFiles/curs.dir/Bus.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/curs.dir/Bus.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UNI\curs\Bus.cpp -o CMakeFiles\curs.dir\Bus.cpp.s
+
 # Object files for target curs
 curs_OBJECTS = \
 "CMakeFiles/curs.dir/main.cpp.obj" \
 "CMakeFiles/curs.dir/Transport.cpp.obj" \
-"CMakeFiles/curs.dir/Vehicle.cpp.obj"
+"CMakeFiles/curs.dir/Vehicle.cpp.obj" \
+"CMakeFiles/curs.dir/Motorcycle.cpp.obj" \
+"CMakeFiles/curs.dir/Truck.cpp.obj" \
+"CMakeFiles/curs.dir/Bus.cpp.obj"
 
 # External object files for target curs
 curs_EXTERNAL_OBJECTS =
@@ -116,11 +158,14 @@ curs_EXTERNAL_OBJECTS =
 curs.exe: CMakeFiles/curs.dir/main.cpp.obj
 curs.exe: CMakeFiles/curs.dir/Transport.cpp.obj
 curs.exe: CMakeFiles/curs.dir/Vehicle.cpp.obj
+curs.exe: CMakeFiles/curs.dir/Motorcycle.cpp.obj
+curs.exe: CMakeFiles/curs.dir/Truck.cpp.obj
+curs.exe: CMakeFiles/curs.dir/Bus.cpp.obj
 curs.exe: CMakeFiles/curs.dir/build.make
 curs.exe: CMakeFiles/curs.dir/linklibs.rsp
 curs.exe: CMakeFiles/curs.dir/objects1.rsp
 curs.exe: CMakeFiles/curs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\UNI\curs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable curs.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\UNI\curs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable curs.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\curs.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

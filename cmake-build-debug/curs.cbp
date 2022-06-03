@@ -80,10 +80,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/UNI/curs/Bus.cpp">
+			<Option target="curs"/>
+		</Unit>
+		<Unit filename="D:/UNI/curs/Bus.h">
+			<Option target="curs"/>
+		</Unit>
+		<Unit filename="D:/UNI/curs/Motorcycle.cpp">
+			<Option target="curs"/>
+		</Unit>
+		<Unit filename="D:/UNI/curs/Motorcycle.h">
+			<Option target="curs"/>
+		</Unit>
 		<Unit filename="D:/UNI/curs/Transport.cpp">
 			<Option target="curs"/>
 		</Unit>
 		<Unit filename="D:/UNI/curs/Transport.h">
+			<Option target="curs"/>
+		</Unit>
+		<Unit filename="D:/UNI/curs/Truck.cpp">
+			<Option target="curs"/>
+		</Unit>
+		<Unit filename="D:/UNI/curs/Truck.h">
 			<Option target="curs"/>
 		</Unit>
 		<Unit filename="D:/UNI/curs/Vehicle.cpp">
