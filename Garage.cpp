@@ -28,4 +28,21 @@ bool Garage::isEmptyGarage() const
     return availableTransport.empty();
 }
 
-Transport* Garage::getTransport(int pos) const {}
+void Garage::printTransport() const
+{
+    int i = 1;
+    for(auto transport : availableTransport){
+        std::cout << i++ << " " << std::setprecision(2) << std::fixed << transport->Info() << std::endl;
+    }
+}
+
+Transport* Garage::getTransport(int pos) const
+{
+    return availableTransport[pos - 1];
+}
+
+Transport* Garage::editTransport(Transport *transport)
+{
+    
+}
+

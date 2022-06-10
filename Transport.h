@@ -24,8 +24,19 @@ public:
 
     virtual std::string Info() const;
 
+    enum Type{
+        Vehicle,
+        Motorcycle,
+        Truck,
+        Bus
+    };
+
+    Type getType() const { return type; }
+
 protected:
     virtual void checkInfo();
+
+    Type type;
 
 private:
     std::string brand;

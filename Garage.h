@@ -24,7 +24,7 @@ public:
     void printTransport() const;
 
     Transport* getTransport(int pos) const;
-    Transport* editTransport(Transport* transport) const;
+    Transport* editTransport(Transport* transport);
 
     int getTransportAmount() const { return availableTransport.size(); }
 

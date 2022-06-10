@@ -15,13 +15,11 @@ Bus::Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_m
 
 std::string Bus::Info() const
 {
-    std::stringstream ss;
-
-    return "Vehicle:\nBrand: " + Transport::getbrand()
-       + "\nModel: " + Transport::getmodel()
-       + "\nMaxSpeed" + std::to_string(Transport::getMaxSpeed())
-       + "\nFuel Consumption(per 100 km): " + std::to_string(Transport::getFuelConsumption())
-       + "\nWeight of " + Transport::getbrand() + " is about " + std::to_string(Transport::getWeight())
+    return "Vehicle:\nBrand: " + getbrand()
+       + "\nModel: " + getmodel()
+       + "\nMaxSpeed" + std::to_string(getMaxSpeed())
+       + "\nFuel Consumption(per 100 km): " + std::to_string(getFuelConsumption())
+       + "\nWeight of " + getbrand() + " is about " + std::to_string(getWeight())
        + "\nMax number of a passengers: " + std::to_string(passengersnumber)
        + "\nCondition Presence: " + std::string((conditionpresense == true) ? "Yes." : "No.")
        + "\nPresense of reclining seats: " + std::string((recliningseats == true) ? "Yes." : "No.")
@@ -40,7 +38,7 @@ void Bus::checkInfo()
         throw std::invalid_argument("Error..\nGrade can't be less than 0.");
 
     if(maxbaggageforpassenger <= 0)
-        throw std::invalid_argument("Error..\nMax baggage for passenger can't be equar or less than 0.")
+        throw std::invalid_argument("Error..\nMax baggage for passenger can't be equar or less than 0.");
 
 }
 
