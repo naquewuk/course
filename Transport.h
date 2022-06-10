@@ -10,8 +10,6 @@ class Transport{
 public:
     Transport(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption);
 
-    virtual ~Transport() {};
-
     virtual std::string getbrand() const { return brand; }
     virtual std::string getmodel() const { return model; }
     virtual int getWeight() const { return weight; }
