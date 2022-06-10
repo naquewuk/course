@@ -86,6 +86,12 @@
 		<Unit filename="D:/UNI/curs/Bus.h">
 			<Option target="curs"/>
 		</Unit>
+		<Unit filename="D:/UNI/curs/Garage.cpp">
+			<Option target="curs"/>
+		</Unit>
+		<Unit filename="D:/UNI/curs/Garage.h">
+			<Option target="curs"/>
+		</Unit>
 		<Unit filename="D:/UNI/curs/Motorcycle.cpp">
 			<Option target="curs"/>
 		</Unit>

@@ -7,8 +7,6 @@ public:
     Vehicle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption,
             int tmp_max_baggage, int tmp_passengers_number, std::string tmp_seat_upholstery);
 
-    ~Vehicle() {};
-
     int getmaxbaggage() const { return max_baggage; }
     int getpassengersnumber() const { return passengers_number; }
     std::string getseatupholstery () const { return seat_upholstery; }

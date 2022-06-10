@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/UNI/curs/Bus.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/Bus.cpp.obj"
+  "D:/UNI/curs/Garage.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/Garage.cpp.obj"
   "D:/UNI/curs/Motorcycle.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/Motorcycle.cpp.obj"
   "D:/UNI/curs/Transport.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/Transport.cpp.obj"
   "D:/UNI/curs/Truck.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/Truck.cpp.obj"

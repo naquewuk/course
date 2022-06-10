@@ -26,7 +26,7 @@ std::string Transport::Info() const
 
 void Transport::checkInfo()
 {
-    if(weight <=0)
+    if(weight <= 0)
         throw std::invalid_argument("Error..\nWeight cannot be less than 0.");
 
     if(maxspeed <= 0)

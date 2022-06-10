@@ -18,5 +18,11 @@ std::string Motorcycle::Info() const
        << "\nMaxSpeed" << Transport::getMaxSpeed()
        << "\nFuel Consumption(per 100 km): " << Transport::getFuelConsumption()
        << "\nWeight of " << Transport::getbrand() << " is about " << Transport::getWeight()
-       << "\n The presence of a stroller: " << strollerpresence;
+       << "\n The presence of a stroller: " << (strollerpresence == true) ? "Yes." : "No.";
+
+    return ss.str();
+}
+
+void Motorcycle::checkInfo(){
+    Transport::checkInfo();
 }

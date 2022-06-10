@@ -152,6 +152,30 @@ Bus.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Bus.cpp.s
 .PHONY : Bus.cpp.s
 
+Garage.obj: Garage.cpp.obj
+.PHONY : Garage.obj
+
+# target to build an object file
+Garage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Garage.cpp.obj
+.PHONY : Garage.cpp.obj
+
+Garage.i: Garage.cpp.i
+.PHONY : Garage.i
+
+# target to preprocess a source file
+Garage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Garage.cpp.i
+.PHONY : Garage.cpp.i
+
+Garage.s: Garage.cpp.s
+.PHONY : Garage.s
+
+# target to generate assembly for a file
+Garage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\curs.dir\build.make CMakeFiles/curs.dir/Garage.cpp.s
+.PHONY : Garage.cpp.s
+
 Motorcycle.obj: Motorcycle.cpp.obj
 .PHONY : Motorcycle.obj
 
@@ -284,6 +308,9 @@ help:
 	@echo ... Bus.obj
 	@echo ... Bus.i
 	@echo ... Bus.s
+	@echo ... Garage.obj
+	@echo ... Garage.i
+	@echo ... Garage.s
 	@echo ... Motorcycle.obj
 	@echo ... Motorcycle.i
 	@echo ... Motorcycle.s

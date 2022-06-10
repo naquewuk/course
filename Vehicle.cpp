@@ -23,9 +23,14 @@ std::string Vehicle::Info() const
        << "\nMax baggage: " << max_baggage
        << "\nPassengers number: " << passengers_number
        << "\nSeat upholstery type: " << seat_upholstery;
+
+    return ss.str();
 }
 
 void Vehicle::checkInfo() {
+
+    Transport::checkInfo();
+
     if (max_baggage <= 0)
         throw std::invalid_argument("Error..\n Wrong max baggage.");
 

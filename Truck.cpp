@@ -19,5 +19,14 @@ std::string Truck::Info() const
        << "\nFuel Consumption(per 100 km): " << Transport::getFuelConsumption()
        << "\nWeight of " << Transport::getbrand() << " is about " << Transport::getWeight()
        << "\nCarrying_capacity: " << carrying_capacity;
+
+    return ss.str();
+}
+void Truck::checkInfo(){
+
+    Transport::checkInfo();
+
+    if(carrying_capacity <= 0)
+        throw std::invalid_argument("Error..\nCarrying Capacity can't be equal or less than 0");
 }
 
