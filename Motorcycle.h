@@ -4,14 +4,14 @@
 
 class Motorcycle : public Transport{
 public:
-    Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption,
-               bool tmp_strollerpresence);
+    Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+               bool tmp_strollerPresence);
 
     ~Motorcycle() {};
 
-    bool getstrollerpresence(){ return strollerpresence; }
+    std::string getStrollerPresence(){ return (strollerPresence == true) ? "Yes." : "No." ; }
 
-    void setstrollerpresence(bool m_strollerpresence) { strollerpresence = m_strollerpresence;}
+    void setStrollerPresence(bool tmp_strollerpresence) { strollerPresence = tmp_strollerpresence; }
 
     std::string Info() const override;
 
@@ -19,7 +19,7 @@ protected:
     void checkInfo() override;
 
 private:
-    bool strollerpresence;
+    bool strollerPresence;
 
 
 };

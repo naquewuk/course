@@ -1,21 +1,26 @@
+#ifndef BUS_H
+#define BUS_H
+
 #include "Transport.h"
 
 class Bus : public Transport{
 public:
-    Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption,
-        int tmp_passengersnumber, bool tmp_conditionerpresence, bool tmp_recliningseats, int tmp_visionsconvenience, int tmp_maxbaggageforpassenger);
+    Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+        int tmp_passengersNumber, bool tmp_conditionPresence, bool tmp_recliningSeats, int tmp_seatingComfort, int tmp_maxBaggageForPassenger);
 
-    int getPassengersNumber() const { return passengersnumber; }
-    bool getConditionPresense() const { return conditionpresense; }
-    bool getRecliningSeats() const { return recliningseats; }
-    int getVisionsConvenience() const { return visionsconvenience; }
-    int getMaxBaggageForPassenger() const { return maxbaggageforpassenger; }
+    ~Bus() {};
 
-    void setPassengersNumber(int passengersnumber) { this->passengersnumber = passengersnumber; }
-    void setConditionPresense(int conditionpresense ){ this->conditionpresense = conditionpresense; }
-    void setRecliningSeats(int recliningseats){ this->recliningseats = recliningseats; }
-    void setVisionsConvenience(int visionsconvenience) { this->visionsconvenience = visionsconvenience; }
-    void setMaxBaggageForPassenger(int maxbaggageforpassenger) { this->maxbaggageforpassenger = maxbaggageforpassenger; }
+    int getPassengersNumber() const { return passengersNumber; }
+    bool getConditionPresense() const { return conditionPresense; }
+    bool getRecliningSeats() const { return recliningSeats; }
+    int getSeatingComfort() const { return seatingComfort; }
+    int getMaxBaggageForPassenger() const { return maxBaggageForPassenger; }
+
+    void setPassengersNumber(int tmp_passengersnumber) { passengersNumber = tmp_passengersnumber; }
+    void setConditionPresense(int tmp_conditionpresense ){ conditionPresense = tmp_conditionpresense; }
+    void setRecliningSeats(int tmp_recliningseats){ recliningSeats = tmp_recliningseats; }
+    void setSeatingComfort(int tmp_seatingcomfort) { seatingComfort = tmp_seatingcomfort; }
+    void setMaxBaggageForPassenger(int tmp_maxbaggageforpassenger) { maxBaggageForPassenger = tmp_maxbaggageforpassenger; }
 
     std::string Info() const override;
 
@@ -23,9 +28,11 @@ protected:
     void checkInfo() override;
 
 private:
-    int passengersnumber;
-    bool conditionpresense;
-    bool recliningseats;
-    int visionsconvenience;
-    int maxbaggageforpassenger;
+    int passengersNumber;
+    bool conditionPresense;
+    bool recliningSeats;
+    int seatingComfort;
+    int maxBaggageForPassenger;
 };
+
+#endif

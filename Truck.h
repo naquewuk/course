@@ -1,15 +1,18 @@
+#ifndef TRUCK_H
+#define TRUCK_H
+
 #include "Transport.h"
 
 class Truck : public Transport{
 public:
-    Truck(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption,
-          int tmp_carrying_capacity);
+    Truck(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+          int tmp_carryingCapacity);
 
     ~Truck() {};
 
-    int getcarryingcapacity() const { return carrying_capacity; }
+    int getCarryingCapacity() const { return carryingCapacity; }
 
-    void setcarryingcapacity( int m_carrying_capacity) { carrying_capacity = m_carrying_capacity; }
+    void setCarryingCapacity( int tmp_carryingCapacity) { carryingCapacity = tmp_carryingCapacity; }
 
     std::string Info() const override;
 
@@ -17,6 +20,8 @@ protected:
     void checkInfo() override;
 
 private:
-    int carrying_capacity;
+    int carryingCapacity;
 
 };
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GARAGE_H
+#define GARAGE_H
 
 #include <iostream>
 #include <set>
@@ -27,6 +28,7 @@ public:
     Transport* editTransport(Transport* transport);
 
     int getTransportAmount() const { return availableTransport.size(); }
+    int countComfort();
 
 private:
     Vehicle* editVehicle(Vehicle* vehicle);
@@ -36,3 +38,5 @@ private:
 
     std::vector<Transport*> availableTransport;
 };
+
+#endif

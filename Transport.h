@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TRANSPORT_H
+#define TRANSPORT_H
 
 #include <string>
 #include <stdexcept>
@@ -8,19 +9,23 @@
 
 class Transport{
 public:
-    Transport(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption);
+    Transport(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort);
 
-    virtual std::string getbrand() const { return brand; }
-    virtual std::string getmodel() const { return model; }
+    ~Transport() {};
+
+    virtual std::string getBrand() const { return brand; }
+    virtual std::string getModel() const { return model; }
     virtual int getWeight() const { return weight; }
-    virtual int getMaxSpeed() const { return maxspeed; }
-    virtual int getFuelConsumption() const { return fuelconsumption; }
+    virtual int getMaxSpeed() const { return maxSpeed; }
+    virtual int getFuelConsumption() const { return fuelConsumption; }
+    virtual int getComfort() const {return comfort; }
 
-    void setbrand(std::string tmp_brand) { brand = tmp_brand; }
-    void setmodel(std::string tmp_model) { model = tmp_model; }
+    void setBrand(std::string tmp_brand) { brand = tmp_brand; }
+    void setModel(std::string tmp_model) { model = tmp_model; }
     void setWeight(int tmp_weight) { weight = tmp_weight; }
-    void setMaxSpeed(int tmp_maxspeed) {maxspeed = tmp_maxspeed; }
-    void setFuelConsumtion(int tmp_fuelconsumption) { fuelconsumption = tmp_fuelconsumption; }
+    void setMaxSpeed(int tmp_maxspeed) {maxSpeed = tmp_maxspeed; }
+    void setFuelConsumtion(int tmp_fuelconsumption) { fuelConsumption = tmp_fuelconsumption; }
+    void setComfort(int tmp_comfort){ comfort = tmp_comfort; }
 
     virtual std::string Info() const;
 
@@ -42,7 +47,10 @@ private:
     std::string brand;
     std::string model;
     int weight;
-    int fuelconsumption;
-    int maxspeed;
+    int maxSpeed;
+    int fuelConsumption;
+    int comfort;
 };
+
+#endif
 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/UNI/curs/Transport.cpp
+Transport.h
+D:/UNI/curs/Transport.h
+
+D:/UNI/curs/Transport.h
+string
+-
+stdexcept
+-
+iostream
+-
+string
+-
+sstream
+-
+
