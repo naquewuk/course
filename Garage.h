@@ -28,7 +28,8 @@ public:
     Transport* editTransport(Transport* transport);
 
     int getTransportAmount() const { return availableTransport.size(); }
-    int countComfort();
+
+    Transport* takeCar(int passengersnumber, int baggage) const;
 
 private:
     Vehicle* editVehicle(Vehicle* vehicle);

@@ -5,7 +5,7 @@
 
 class Bus : public Transport{
 public:
-    Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+    Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort,
         int tmp_passengersNumber, bool tmp_conditionPresence, bool tmp_recliningSeats, int tmp_seatingComfort, int tmp_maxBaggageForPassenger);
 
     ~Bus() {};

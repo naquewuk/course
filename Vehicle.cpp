@@ -1,10 +1,10 @@
 #include "Vehicle.h"
 
-Vehicle::Vehicle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+Vehicle::Vehicle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort,
                  int tmp_maxBaggage, int tmp_passengersNumber, std::string tmp_seatUpholstery,
                  Body tmp_body, Section tmp_section) :
 
-        Transport(tmp_brand, tmp_model, tmp_weight, tmp_fuelConsumption, tmp_maxSpeed),
+        Transport(tmp_brand, tmp_model, tmp_weight, tmp_maxSpeed, tmp_fuelConsumption, tmp_comfort),
         maxBaggage(tmp_maxBaggage),
         passengersNumber(tmp_passengersNumber),
         seatUpholstery(tmp_seatUpholstery),
@@ -22,14 +22,15 @@ std::string Vehicle::Info() const
 
     ss << "Vehicle:\nBrand: " << getBrand()
        << "\nModel: " << getModel()
-       << "\nMaxSpeed" << getMaxSpeed()
+       << "\nMaxSpeed: " << getMaxSpeed()
        << "\nFuel Consumption(per 100 km): " << getFuelConsumption()
        << "\nWeight of " << getBrand() << " is about " << getWeight()
        << "\nMax baggage: " << maxBaggage
        << "\nPassengers number: " << passengersNumber
        << "\nSeat upholstery type: " << seatUpholstery
        << "\nBody: " << wichBody(body)
-       << "\nSection: " << wichSection(section);
+       << "\nSection: " << wichSection(section)
+       << "\nComfort (max: 70): " << getComfort() ;
 
     return ss.str();
 }

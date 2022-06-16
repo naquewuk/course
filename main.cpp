@@ -47,7 +47,7 @@ int main()
                         case 1:  // Add Transport
                         {
                             int num2;
-                            std::cout << "1. Vehcile." << std::endl;
+                            std::cout << "1. Vegicle." << std::endl;
                             std::cout << "2. Motorcycle." << std::endl;
                             std::cout << "3. Truck. " << std::endl;
                             std::cout << "4. Bus." << std::endl;
@@ -66,51 +66,37 @@ int main()
                                     int entersection;
                                     int comfort = 20;
 
-                                    std::cout << "Enter all fiels for Vehicle." << std::endl;
+                                    std::cout << "Enter all fields for Vehicle.";
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
-                                    std::cout << "\nModel: ";
+                                    std::cout << "Model: ";
                                     std::getline(std::cin, model);
-                                    std::cout << "\nWeight: ";
+                                    std::cout << "Weight (in kg): ";
                                     std::cin >> weight;
-                                    std::cout << "\nMax speed: ";
+                                    std::cout << "Max speed (km/h): ";
                                     std::cin >> maxspeed;
-                                    std::cout << "\nFuel Consumption: ";
+                                    std::cout << "Fuel Consumption(per 100 km): ";
                                     std::cin >> fuelconsumption;
-
-                                    comfort += (fuelconsumption < )
-
-                                    std::cout << "\nMax baggage: ";
+                                    std::cout << "Max baggage (in kg): ";
                                     std::cin >> maxbaggage;
-                                    if(maxbaggage > 100)
-                                        comfort += 20;
-
-                                    std::cout << "\nMax passenger number: ";
+                                    std::cout << "Max passenger number: ";
                                     std::cin >> passengersnumber;
-                                    if(passengersnumber > 4)
-                                        comfort += 15;
-
-                                    std::cout << "\nSeat Upholsery";
-                                    std::getline(std::cin, seatupholsery);
-                                    std::cout << "\nBody type:\n1. Sedan.\n2. Wagon.\n3. Cabriolet" << std::endl;
+                                    std::cout << "Seat Upholsery: ";
+                                    std::cin >> seatupholsery;
+                                    std::cout << "Body type:\n1. Sedan.\n2. Wagon.\n3. Cabriolet" << std::endl;
                                     std::cin >> enterbody;
                                     body = (enterbody <= 3 && enterbody >= 1) ? static_cast<Vehicle::Body>(enterbody) : Vehicle::Unknown;
                                     std::cout << "Section:\n1. A - Mini Car.\n2. B - Small Car.\n3. C - Medium Car.\n4. D - Large Car.\n5. E - Executive Car."
                                                  "\n6. F - Luxury Car.\n7. J - Sport Utility - SUV.\n8. M - Multi Purpose Car.\n9. S - Sport Coupe." << std::endl;
                                     std::cin >> entersection;
-                                    if(enterbody == 6)
-                                        comfort += 15;
+                                    section = (entersection <= 9 && entersection >= 1) ? static_cast<Vehicle::Section>(entersection) : Vehicle::U;
 
-                                    else if(enterbody == 8)
-                                        comfort += 10;
+                                    comfort += (fuelconsumption < 20) ? 10 : 0;
+                                    comfort += (maxbaggage > 100) ? 15 : 10;
+                                    comfort += (passengersnumber > 4 && (entersection == 7 || entersection == 8)) ? 15 : 0;
 
-                                    else if(enterbody == 9)
-                                        comfort += 20;
-
-                                    section = (entersection <= 9 && entersection >= 1) ? static_cast<Vehicle::Section>(entersection) :Vehicle::U;
-
-                                    transport = new Vehicle(brand, model, weight, maxspeed, fuelconsumption, maxbaggage, passengersnumber, seatupholsery, body, section);
+                                    transport = new Vehicle(brand, model, weight, maxspeed, fuelconsumption, comfort, maxbaggage, passengersnumber, seatupholsery, body, section);
                                     garage.addTransport(transport);
                                     system("cls");
                                     break;
@@ -126,24 +112,22 @@ int main()
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
-                                    std::cout << "\nModel: ";
+                                    std::cout << "Model: ";
                                     std::getline(std::cin, model);
-                                    std::cout << "\nWeight: ";
+                                    std::cout << "Weight: ";
                                     std::cin >> weight;
-                                    std::cout << "\nMax speed: ";
+                                    std::cout << "Max speed: ";
                                     std::cin >> maxspeed;
-                                    std::cout << "\nFuel Consumption: ";
+                                    std::cout << "Fuel Consumption(per 100 km): ";
                                     std::cin >> fuelconsumption;
-
-                                    comfort += (fuelconsumption < 10) ? 10 : 0;
-
-                                    std::cout << "\nStroller Presence y/n: ";
+                                    std::cout << "Stroller Presence y/n: ";
                                     std::cin >> strollerPresence;
                                     strollerpresence = (strollerPresence == 'y'|| strollerPresence == 'Y') ? true : false;
 
-                                    comfort += (strollerpresence && maxspeed < 200) ? 10 : 0;
+                                    comfort += (fuelconsumption < 10) ? 15 : 0;
+                                    comfort += (strollerpresence && maxspeed < 250) ? 15 : 0;
 
-                                    transport = new Motorcycle(brand, model, weight, maxspeed, fuelconsumption, strollerpresence);
+                                    transport = new Motorcycle(brand, model, weight, maxspeed, fuelconsumption, comfort, strollerpresence);
                                     garage.addTransport(transport);
                                     system("cls");
                                     break;
@@ -152,23 +136,23 @@ int main()
                                 case 3: // add Truck
                                 {
                                     int carryingcapacity;
-
+                                    int comfort = 0;
                                     std::cout << "Enter all fiels for Truck." << std::endl;
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
-                                    std::cout << "\nModel: ";
+                                    std::cout << "Model: ";
                                     std::getline(std::cin, model);
-                                    std::cout << "\nWeight: ";
+                                    std::cout << "Weight (kg): ";
                                     std::cin >> weight;
-                                    std::cout << "\nMax speed: ";
+                                    std::cout << "Max speed (km/h): ";
                                     std::cin >> maxspeed;
-                                    std::cout << "\nFuel Consumption: ";
+                                    std::cout << "Fuel Consumption(per 100 km): ";
                                     std::cin >> fuelconsumption;
-                                    std::cout << "\nCarrying capacity: ";
+                                    std::cout << "Carrying capacity: ";
                                     std::cin >> carryingcapacity;
 
-                                    transport = new Truck(brand, model, weight, maxspeed, fuelconsumption, carryingcapacity);
+                                    transport = new Truck(brand, model, weight, maxspeed, fuelconsumption, comfort,  carryingcapacity);
                                     garage.addTransport(transport);
                                     system("cls");
                                     break;
@@ -184,32 +168,42 @@ int main()
                                     int seatingcomfort;
                                     int maxbaggageforpassenger;
 
+                                    int comfort = 20;
+
                                     std::cout << "Enter all fiels for Bus." << std::endl;
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
-                                    std::cout << "\nModel: ";
+                                    std::cout << "Model: ";
                                     std::getline(std::cin, model);
-                                    std::cout << "\nWeight: ";
+                                    std::cout << "Weight: ";
                                     std::cin >> weight;
-                                    std::cout << "\nMax speed: ";
+                                    std::cout << "Max speed: ";
                                     std::cin >> maxspeed;
-                                    std::cout << "\nFuel Consumption: ";
+                                    std::cout << "Fuel Consumption: ";
                                     std::cin >> fuelconsumption;
-                                    std::cout << "\nPassengers number: ";
+                                    std::cout << "Passengers number: ";
                                     std::cin >> passengersnumber;
-                                    std::cout << "\nCondition Presence y/n: ";
+                                    std::cout << "Condition Presence y/n: ";
                                     std::cin >> conditionPresense;
                                     conditionpresense = (conditionPresense == 'Y' || conditionPresense == 'y' ) ? true : false;
-                                    std::cout << "\nReclining seats y/n: ";
+                                    std::cout << "Reclining seats y/n: ";
                                     std::cin >> recliningSeats;
                                     recliningseats = (conditionPresense == 'Y' || conditionPresense == 'y') ? true : false;
-                                    std::cout << "Seating comfort: ";
+                                    std::cout << "Seating comfort(0-100 ): ";
                                     std::cin >> seatingcomfort;
                                     std::cout << "Max baggage for passenger: ";
                                     std::cin >> maxbaggageforpassenger;
 
-                                    transport = new Bus(brand, model, weight, maxspeed, fuelconsumption,
+                                    comfort += (passengersnumber > 20 && passengersnumber < 50) ? 10 : 0;
+                                    comfort += (conditionpresense = true) ? 15 : -5;
+                                    comfort += (recliningseats == true) ? 10 : 0;
+                                    comfort += (seatingcomfort >= 0 && seatingcomfort <= 25) ? -5 :
+                                            (seatingcomfort > 25 && seatingcomfort <= 50) ? 0 :
+                                            (seatingcomfort > 50 && seatingcomfort <= 75) ? 5 : 10;
+                                    comfort += (maxbaggageforpassenger > 6) ? 10 : 0;
+
+                                    transport = new Bus(brand, model, weight, maxspeed, fuelconsumption, comfort,
                                                         passengersnumber, conditionpresense, recliningseats, seatingcomfort,
                                                         maxbaggageforpassenger);
                                     garage.addTransport(transport);
@@ -301,10 +295,49 @@ int main()
 
                      else
                      {
+                         int num2;
                          std::cout << "Welcome to my garage." << std::endl;
                          std::cout << "Wanna do smth?\nFor Example: " << std::endl;
                          std::cout << "1. You can take car." << std::endl;
                          std::cout << "2. We can select a car for you. "<< std::endl;
+                         std::cin >> num2;
+
+                         switch(num2)
+                         {
+                             case 1:
+                             {
+                                 int pos;
+                                 garage.printTransport();
+                                 std::cout << "Enter the number of a transport: " << std::endl;
+                                 std::cin >> pos;
+
+                                 if( pos > garage.getTransportAmount() || pos <= 0)
+                                     throw std::invalid_argument("Error..\nWrong position!");
+
+                                 else
+                                 {
+                                     std::cout << "You choose " << brand << " " << model << std::endl;
+                                     std::cout << "Have a good ride. Be carefully!" << std::endl;
+                                 }
+                                 break;
+                             }
+
+                             case 2:
+                             {
+                                 Transport* m_transport;
+                                 int passengersnumber, baggage;
+                                 std::cout << "Enter please. How many of you?: ";
+                                 std::cin >> passengersnumber;
+
+                                 std::cout << "\nEnter please. How much baggage with you." << std::endl;
+                                 std::cin >> baggage;
+
+                                 m_transport = garage.takeCar(passengersnumber, baggage);
+                                 std::cout << m_transport->Info();
+
+                             }
+
+                         }
                      }
                 }
 

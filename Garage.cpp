@@ -40,20 +40,50 @@ Transport* Garage::getTransport(int pos) const
     return availableTransport[pos - 1];
 }
 
-int Garage::countComfort()
+Transport* Garage::takeCar(int passengersnumber, int baggage) const
 {
-    for(auto transport : availableTransport)
+    Transport* transport;
+
+    for(auto tmp_transport : availableTransport)
     {
-        if (transport->getType() == Transport::Type::Vehicle)
-        {
+        switch (tmp_transport->getType()) {
+            case Transport::Motorcycle:
+                Motorcycle* motorcycle;
+                if(passengersnumber <= 2 && baggage <= 15)
+                    transport = motorcycle;
+                break;
+
+            case Transport::Vehicle:
+                Vehicle* vehicle;
+                if(vehicle->getPassengersNumber() >= passengersnumber && vehicle->getMaxBaggage() >= baggage * passengersnumber)
+                    transport = vehicle;
+                break;
+
+            case Transport::Bus:
+                Bus* bus;
+                if(bus->getPassengersNumber() >= passengersnumber && bus->getMaxBaggageForPassenger() >= baggage )
+                    transport = bus;
+                break;
+
+            case Transport::Truck:
+                Truck* truck;
+                if(truck->getCarryingCapacity() >= baggage)
+                    transport = truck;
+                break;
+
+            default:
+                break;
 
         }
+        return transport;
     }
+
+    return transport;
 }
 
-Transport* Garage::editTransport(Transport *transport)
+Transport* Garage::editTransport(Transport* transport)
 {
-    Transport* e_transport = nullptr;
+//    Transport* e_transport = nullptr;
     Vehicle* vehicle = nullptr;
     Motorcycle* motorcycle = nullptr;
     Truck* truck = nullptr;
@@ -104,12 +134,13 @@ Transport* Garage::editTransport(Transport *transport)
     return transport;
 }
 
-Vehicle* Garage::editVehicle(Vehicle *vehicle)
+Vehicle* Garage::editVehicle(Vehicle* vehicle)
 {
     char voice;
 
     std::string brand, model;
     int weight, fuelconsumption, maxspeed;
+
     int bodyIndex, sectionIndex;
     int maxbaggage, passengersnumber;
     std::string seatupholstery;
@@ -122,7 +153,10 @@ Vehicle* Garage::editVehicle(Vehicle *vehicle)
     if(voice == 'Y' || voice == 'y')
     {
         std::cout << "Enter new brand and model: ";
-        std::cin >> brand >> model;
+        std::cout << "Brand: ";
+        std::getline(std::cin, brand);
+        std::cout << "Model: ";
+        std::getline(std::cin, model);
         vehicle->setBrand(brand);
         vehicle->setModel(model);
     }
@@ -220,8 +254,10 @@ Motorcycle* Garage::editMotorcycle(Motorcycle* motorcycle)
     std::cin >> voice;
     if(voice == 'Y' || voice == 'y')
     {
-        std::cout << "Enter new brand and model: ";
-        std::cin >> brand >> model;
+        std::cout << "Brand: ";
+        std::getline(std::cin, brand);
+        std::cout << "Model: ";
+        std::getline(std::cin, model);
         motorcycle->setBrand(brand);
         motorcycle->setModel(model);
     }
@@ -279,8 +315,10 @@ Truck* Garage::editTruck(Truck* truck)
     std::cin >> voice;
     if(voice == 'Y' || voice == 'y')
     {
-        std::cout << "Enter new brand and model: ";
-        std::cin >> brand >> model;
+        std::cout << "Brand: ";
+        std::getline(std::cin, brand);
+        std::cout << "Model: ";
+        std::getline(std::cin, model);
         truck->setBrand(brand);
         truck->setModel(model);
     }
@@ -345,8 +383,10 @@ Bus* Garage::editBus(Bus* bus)
     std::cin >> voice;
     if(voice == 'Y' || voice == 'y')
     {
-        std::cout << "Enter new brand and model: ";
-        std::cin >> brand >> model;
+        std::cout << "Brand: ";
+        std::getline(std::cin, brand);
+        std::cout << "Model: ";
+        std::getline(std::cin, model);
         bus->setBrand(brand);
         bus->setModel(model);
     }

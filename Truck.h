@@ -5,7 +5,7 @@
 
 class Truck : public Transport{
 public:
-    Truck(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+    Truck(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort,
           int tmp_carryingCapacity);
 
     ~Truck() {};

@@ -1,8 +1,8 @@
 #include "Motorcycle.h"
 
-Motorcycle::Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed,
-                       int tmp_fuelconsumption, bool tmp_strollerpresence) :
-        Transport(tmp_brand, tmp_model, tmp_weight, tmp_fuelconsumption, tmp_maxspeed),
+Motorcycle::Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption,int tmp_comfort,
+                        bool tmp_strollerpresence) :
+        Transport(tmp_brand, tmp_model, tmp_weight, tmp_maxspeed, tmp_fuelconsumption, tmp_comfort),
         strollerPresence(tmp_strollerpresence)
 {
     checkInfo();

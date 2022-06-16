@@ -1,8 +1,8 @@
 #include "Truck.h"
 
-Truck::Truck(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+Truck::Truck(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort,
              int tmp_carryingCapacity):
-        Transport(tmp_brand, tmp_model, tmp_weight, tmp_fuelConsumption, tmp_maxSpeed),
+        Transport(tmp_brand, tmp_model, tmp_weight, tmp_maxSpeed, tmp_fuelConsumption, tmp_comfort),
         carryingCapacity(tmp_carryingCapacity)
 {
     checkInfo();
@@ -27,7 +27,7 @@ void Truck::checkInfo(){
 
     Transport::checkInfo();
 
-    if(carryingCapacity <= 0)
-        throw std::invalid_argument("Error..\nCarrying Capacity can't be equal or less than 0");
+    if(carryingCapacity <= 300)
+        throw std::invalid_argument("Error..\nCarrying Capacity can't be equal or less than 100 kg.\nThis is a very small weight for a truck.");
 }
 

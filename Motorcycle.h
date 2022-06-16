@@ -4,7 +4,7 @@
 
 class Motorcycle : public Transport{
 public:
-    Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+    Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort,
                bool tmp_strollerPresence);
 
     ~Motorcycle() {};
@@ -20,6 +20,4 @@ protected:
 
 private:
     bool strollerPresence;
-
-
 };

@@ -8,7 +8,7 @@ public:
 
     enum Body
     {
-        Sedan,
+        Sedan = 1,
         Wagon,
         Cabriolet,
         Unknown
@@ -16,7 +16,7 @@ public:
 
     enum Section
     {
-        A, //Mini Cars,
+        A = 1, //Mini Cars,
         B, //Small Cars,
         C, //Medium Cars,
         D, //Large Cars,
@@ -28,7 +28,7 @@ public:
         U  //Unknown
     };
 
-    Vehicle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption,
+    Vehicle(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxSpeed, int tmp_fuelConsumption, int tmp_comfort,
             int tmp_max_baggage, int tmp_passengersNumber, std::string tmp_seatUpholstery, Body tmp_body, Section tmp_section);
 
     ~Vehicle() {};

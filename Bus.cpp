@@ -1,9 +1,9 @@
 #include "Bus.h"
 
-Bus::Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption,
+Bus::Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_maxspeed, int tmp_fuelconsumption, int tmp_comfort,
              int tmp_passengersNumber, bool tmp_conditionPresence, bool tmp_recliningSeats, int tmp_seatingComfort,
              int tmp_maxBaggageForPassenger) :
-        Transport(tmp_brand, tmp_model, tmp_weight, tmp_fuelconsumption, tmp_maxspeed),
+        Transport(tmp_brand, tmp_model, tmp_weight, tmp_fuelconsumption, tmp_maxspeed, tmp_comfort),
         passengersNumber(tmp_passengersNumber),
         conditionPresense(tmp_conditionPresence),
         recliningSeats(tmp_recliningSeats),
