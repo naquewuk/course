@@ -83,7 +83,6 @@ Transport* Garage::takeCar(int passengersnumber, int baggage) const
 
 Transport* Garage::editTransport(Transport* transport)
 {
-//    Transport* e_transport = nullptr;
     Vehicle* vehicle = nullptr;
     Motorcycle* motorcycle = nullptr;
     Truck* truck = nullptr;

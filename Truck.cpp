@@ -13,7 +13,7 @@ std::string Truck::Info() const
 {
     std::stringstream ss;
 
-    ss << "Vehicle:\nBrand: " << getBrand()
+    ss << "Truck:\nBrand: " << getBrand()
        << "\nModel: " << getModel()
        << "\nMaxSpeed" << getMaxSpeed()
        << "\nFuel Consumption(per 100 km): " << getFuelConsumption()

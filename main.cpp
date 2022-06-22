@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 #include <memory>
 #include <stdexcept>
 #include "Garage.h"
@@ -47,7 +46,7 @@ int main()
                         case 1:  // Add Transport
                         {
                             int num2;
-                            std::cout << "1. Vegicle." << std::endl;
+                            std::cout << "1. Vehicle." << std::endl;
                             std::cout << "2. Motorcycle." << std::endl;
                             std::cout << "3. Truck. " << std::endl;
                             std::cout << "4. Bus." << std::endl;
@@ -66,7 +65,7 @@ int main()
                                     int entersection;
                                     int comfort = 20;
 
-                                    std::cout << "Enter all fields for Vehicle.";
+                                    std::cout << "Enter all fields for Vehicle.\n";
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
@@ -108,7 +107,7 @@ int main()
                                     char strollerPresence;
                                     int comfort = 20;
 
-                                    std::cout << "Enter all fields for Motorcycle." << std::endl;
+                                    std::cout << "Enter all fields for Motorcycle" << std::endl;
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
@@ -213,7 +212,6 @@ int main()
 
                                 default:
                                     break;
-
                             }
                             break;
                         }
@@ -289,6 +287,7 @@ int main()
                 }
 
                 case 2: // User
+
                 {
                      if(garage.isEmptyGarage() == true)
                          std::cout << "Welcome to my garage. I am sorry, but garage is empty." << std::endl;
@@ -329,18 +328,28 @@ int main()
                                  std::cout << "Enter please. How many of you?: ";
                                  std::cin >> passengersnumber;
 
-                                 std::cout << "\nEnter please. How much baggage with you." << std::endl;
+                                 std::cout << "Enter please. How much baggage with you?:" ;
                                  std::cin >> baggage;
 
                                  m_transport = garage.takeCar(passengersnumber, baggage);
                                  std::cout << m_transport->Info();
-
+                                 break;
                              }
 
                          }
                      }
                 }
 
+                case 0:
+                    exit = true;
+                    break;
+
+                default:
+                    break;
+            }
+            if(exit)
+            {
+                break;
             }
         } catch (const std::exception& ex){
             std::cerr << ex.what() << std::endl;

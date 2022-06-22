@@ -16,7 +16,7 @@ Bus::Bus(std::string tmp_brand, std::string tmp_model, int tmp_weight, int tmp_m
 
 std::string Bus::Info() const
 {
-    return "Vehicle:\nBrand: " + getBrand()
+    return "Bus:\nBrand: " + getBrand()
        + "\nModel: " + getModel()
        + "\nMaxSpeed" + std::to_string(getMaxSpeed())
        + "\nFuel Consumption(per 100 km): " + std::to_string(getFuelConsumption())

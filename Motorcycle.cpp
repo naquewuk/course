@@ -13,12 +13,12 @@ std::string Motorcycle::Info() const
 {
     std::stringstream ss;
 
-    ss << "Vehicle:\nBrand: " << getBrand()
+    ss << "Motorcycle:\nBrand: " << getBrand()
        << "\nModel: " << getModel()
-       << "\nMaxSpeed" << getMaxSpeed()
+       << "\nMaxSpeed: " << getMaxSpeed()
        << "\nFuel Consumption(per 100 km): " << getFuelConsumption()
        << "\nWeight of " << getBrand() << " is about " << getWeight()
-       << "\nThe presence of a stroller: " << (strollerPresence == true) ? "Yes." : "No.";
+       << "\nThe presence of a stroller: " << ((strollerPresence == 1) ? "Yes." : "No.");
 
     return ss.str();
 }

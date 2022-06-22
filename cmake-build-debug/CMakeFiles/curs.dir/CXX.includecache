@@ -6,31 +6,9 @@
 
 #IncludeRegexTransform: 
 
-D:/UNI/curs/Bus.h
-Transport.h
-D:/UNI/curs/Transport.h
-
-D:/UNI/curs/Garage.h
-iostream
--
-set
--
-vector
--
-algorithm
--
-iomanip
--
-Transport.h
-D:/UNI/curs/Transport.h
-Vehicle.h
-D:/UNI/curs/Vehicle.h
-Truck.h
-D:/UNI/curs/Truck.h
+D:/UNI/curs/Motorcycle.cpp
 Motorcycle.h
 D:/UNI/curs/Motorcycle.h
-Bus.h
-D:/UNI/curs/Bus.h
 
 D:/UNI/curs/Motorcycle.h
 Transport.h
@@ -47,34 +25,4 @@ string
 -
 sstream
 -
-
-D:/UNI/curs/Truck.h
-Transport.h
-D:/UNI/curs/Transport.h
-
-D:/UNI/curs/Vehicle.h
-Transport.h
-D:/UNI/curs/Transport.h
-
-D:/UNI/curs/main.cpp
-iostream
--
-iomanip
--
-memory
--
-stdexcept
--
-Garage.h
-D:/UNI/curs/Garage.h
-Transport.h
-D:/UNI/curs/Transport.h
-Vehicle.h
-D:/UNI/curs/Vehicle.h
-Motorcycle.h
-D:/UNI/curs/Motorcycle.h
-Truck.h
-D:/UNI/curs/Truck.h
-Bus.h
-D:/UNI/curs/Bus.h
 

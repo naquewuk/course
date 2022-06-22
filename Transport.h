@@ -39,9 +39,9 @@ public:
     Type getType() const { return type; }
 
 protected:
-    virtual void checkInfo();
-
     Type type;
+
+    virtual void checkInfo();
 
 private:
     std::string brand;
