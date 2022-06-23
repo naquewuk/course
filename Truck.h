@@ -15,6 +15,8 @@ public:
     void setCarryingCapacity( int tmp_carryingCapacity) { carryingCapacity = tmp_carryingCapacity; }
 
     std::string Info() const override;
+    bool canTransport(int passengersnumber, int baggage) override;
+    int prior() const override;
 
 protected:
     void checkInfo() override;

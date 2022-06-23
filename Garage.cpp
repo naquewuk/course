@@ -22,6 +22,24 @@ void Garage::removeTransport(int pos)
         availableTransport.erase(availableTransport.begin() + pos - 1);
 }
 
+Transport* Garage::takeCar(int passengersnumber, int baggage,
+                           std::function<int(Transport*)> f )
+{
+    std::sort(availableTransport.begin(), availableTransport.end(),
+              [&f](Transport* const& a, Transport* const& b)->bool {
+            return (f(a)) > (f(b));
+            });
+    for (const auto &item : this->availableTransport)
+    {
+        if(item->canTransport(passengersnumber, baggage))
+        {
+            return item;
+        }
+    }
+
+    return nullptr;
+}
+
 bool Garage::isEmptyGarage() const
 {
     return availableTransport.empty();
@@ -38,47 +56,6 @@ void Garage::printTransport() const
 Transport* Garage::getTransport(int pos) const
 {
     return availableTransport[pos - 1];
-}
-
-Transport* Garage::takeCar(int passengersnumber, int baggage) const
-{
-    Transport* transport;
-
-    for(auto tmp_transport : availableTransport)
-    {
-        switch (tmp_transport->getType()) {
-            case Transport::Motorcycle:
-                Motorcycle* motorcycle;
-                if(passengersnumber <= 2 && baggage <= 15)
-                    transport = motorcycle;
-                break;
-
-            case Transport::Vehicle:
-                Vehicle* vehicle;
-                if(vehicle->getPassengersNumber() >= passengersnumber && vehicle->getMaxBaggage() >= baggage * passengersnumber)
-                    transport = vehicle;
-                break;
-
-            case Transport::Bus:
-                Bus* bus;
-                if(bus->getPassengersNumber() >= passengersnumber && bus->getMaxBaggageForPassenger() >= baggage )
-                    transport = bus;
-                break;
-
-            case Transport::Truck:
-                Truck* truck;
-                if(truck->getCarryingCapacity() >= baggage)
-                    transport = truck;
-                break;
-
-            default:
-                break;
-
-        }
-        return transport;
-    }
-
-    return transport;
 }
 
 Transport* Garage::editTransport(Transport* transport)
@@ -153,6 +130,8 @@ Vehicle* Garage::editVehicle(Vehicle* vehicle)
     {
         std::cout << "Enter new brand and model: ";
         std::cout << "Brand: ";
+        std::cout.flush();
+        std::cin >> std::ws;
         std::getline(std::cin, brand);
         std::cout << "Model: ";
         std::getline(std::cin, model);

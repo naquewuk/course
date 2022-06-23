@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/UNI/curs/Motorcycle.cpp
-Motorcycle.h
-D:/UNI/curs/Motorcycle.h
-
-D:/UNI/curs/Motorcycle.h
-Transport.h
-D:/UNI/curs/Transport.h
-
 D:/UNI/curs/Transport.h
 string
 -
@@ -25,4 +17,12 @@ string
 -
 sstream
 -
+
+D:/UNI/curs/Truck.cpp
+Truck.h
+D:/UNI/curs/Truck.h
+
+D:/UNI/curs/Truck.h
+Transport.h
+D:/UNI/curs/Transport.h
 

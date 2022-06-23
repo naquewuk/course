@@ -18,7 +18,7 @@ std::string Bus::Info() const
 {
     return "Bus:\nBrand: " + getBrand()
        + "\nModel: " + getModel()
-       + "\nMaxSpeed" + std::to_string(getMaxSpeed())
+       + "\nMaxSpeed: " + std::to_string(getMaxSpeed())
        + "\nFuel Consumption(per 100 km): " + std::to_string(getFuelConsumption())
        + "\nWeight of " + getBrand() + " is about " + std::to_string(getWeight())
        + "\nMax number of a passengers: " + std::to_string(passengersNumber)
@@ -43,4 +43,11 @@ void Bus::checkInfo()
 
 }
 
+bool Bus::canTransport(int passengersnumber, int baggage) {
+    return getPassengersNumber() >= passengersnumber && getMaxBaggageForPassenger() * passengersnumber >= baggage;
+}
 
+int Bus::prior() const
+{
+    return 70;
+}

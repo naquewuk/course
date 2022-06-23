@@ -28,6 +28,14 @@ void Truck::checkInfo(){
     Transport::checkInfo();
 
     if(carryingCapacity <= 300)
-        throw std::invalid_argument("Error..\nCarrying Capacity can't be equal or less than 100 kg.\nThis is a very small weight for a truck.");
+        throw std::invalid_argument("Error..\nCarrying Capacity can't be equal or less than 300 kg.\nThis is a very small weight for a truck.");
+}
+
+bool Truck::canTransport(int passengersnumber, int baggage) {
+    return passengersnumber <= 3 && getCarryingCapacity() >= baggage;
+}
+
+int Truck::prior() const {
+    return 50;
 }
 

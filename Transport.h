@@ -18,7 +18,7 @@ public:
     virtual int getWeight() const { return weight; }
     virtual int getMaxSpeed() const { return maxSpeed; }
     virtual int getFuelConsumption() const { return fuelConsumption; }
-    virtual int getComfort() const {return comfort; }
+    virtual int getComfort() const { return comfort; }
 
     void setBrand(std::string tmp_brand) { brand = tmp_brand; }
     void setModel(std::string tmp_model) { model = tmp_model; }
@@ -26,6 +26,9 @@ public:
     void setMaxSpeed(int tmp_maxspeed) {maxSpeed = tmp_maxspeed; }
     void setFuelConsumtion(int tmp_fuelconsumption) { fuelConsumption = tmp_fuelconsumption; }
     void setComfort(int tmp_comfort){ comfort = tmp_comfort; }
+
+    virtual bool canTransport(int passengersnumber, int baggage) { return false; };
+    virtual int prior() const = 0;
 
     virtual std::string Info() const;
 

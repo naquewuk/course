@@ -111,3 +111,11 @@ void Vehicle::checkInfo() {
     if(passengersNumber <= 0)
         throw std::invalid_argument("Error..\nWrong passengers number.");
 }
+
+bool Vehicle::canTransport(int passengersnumber, int baggage) {
+    return getPassengersNumber() >= passengersnumber && getMaxBaggage() >= baggage;
+}
+
+int Vehicle::prior() const {
+    return 90;
+}

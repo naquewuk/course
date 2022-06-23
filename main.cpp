@@ -136,7 +136,7 @@ int main()
                                 {
                                     int carryingcapacity;
                                     int comfort = 0;
-                                    std::cout << "Enter all fiels for Truck." << std::endl;
+                                    std::cout << "Enter all fields for Truck." << std::endl;
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
@@ -169,7 +169,7 @@ int main()
 
                                     int comfort = 20;
 
-                                    std::cout << "Enter all fiels for Bus." << std::endl;
+                                    std::cout << "Enter all fields for Bus." << std::endl;
                                     std::cout << "Brand:";
                                     std::cin.ignore();
                                     std::getline(std::cin, brand);
@@ -188,7 +188,7 @@ int main()
                                     conditionpresense = (conditionPresense == 'Y' || conditionPresense == 'y' ) ? true : false;
                                     std::cout << "Reclining seats y/n: ";
                                     std::cin >> recliningSeats;
-                                    recliningseats = (conditionPresense == 'Y' || conditionPresense == 'y') ? true : false;
+                                    recliningseats = (recliningSeats == 'Y' || recliningSeats == 'y') ? true : false;
                                     std::cout << "Seating comfort(0-100 ): ";
                                     std::cin >> seatingcomfort;
                                     std::cout << "Max baggage for passenger: ";
@@ -220,12 +220,12 @@ int main()
                         {
                             if(garage.isEmptyGarage() != true)
                             {
-                                int position;
+                                int pos = 0;
                                 garage.printTransport();
-                                std::cout << "Choose what you want to remove: " << std::endl;
-                                std::cin >> position;
+                                std::cout << "0. Exit\nEnter: ";
+                                std::cin >> pos;
 
-                                garage.removeTransport(position);
+                                garage.removeTransport(pos);
                                 system("cls");
                             }
 
@@ -242,7 +242,7 @@ int main()
                             {
                                 int pos = 0;
                                 garage.printTransport();
-                                std::cout << "0. Exit\nEnter position which Transport: ";
+                                std::cout << "0. Exit\nEnter: ";
                                 std::cin >> pos;
 
                                 if(pos < 0 || pos > garage.getTransportAmount())
@@ -299,6 +299,7 @@ int main()
                          std::cout << "Wanna do smth?\nFor Example: " << std::endl;
                          std::cout << "1. You can take car." << std::endl;
                          std::cout << "2. We can select a car for you. "<< std::endl;
+                         std::cout << "0. Exit\nEnter: ";
                          std::cin >> num2;
 
                          switch(num2)
@@ -308,10 +309,14 @@ int main()
                                  int pos;
                                  garage.printTransport();
                                  std::cout << "Enter the number of a transport: " << std::endl;
+                                 std::cout << "0. Exit\nEnter: ";
                                  std::cin >> pos;
 
-                                 if( pos > garage.getTransportAmount() || pos <= 0)
+                                 if( pos > garage.getTransportAmount() || pos < 0)
                                      throw std::invalid_argument("Error..\nWrong position!");
+
+                                 else if(pos == 0)
+                                     break;
 
                                  else
                                  {
@@ -325,19 +330,40 @@ int main()
                              {
                                  Transport* m_transport;
                                  int passengersnumber, baggage;
+                                 int pos;
                                  std::cout << "Enter please. How many of you?: ";
                                  std::cin >> passengersnumber;
 
                                  std::cout << "Enter please. How much baggage with you?:" ;
                                  std::cin >> baggage;
+                                 std::cout << "Select mode:\n1.Choose by prority\n2.Choose by comfort" << std::endl;
+                                 std::cin >> pos;
+                                 if (pos == 2)
+                                     m_transport = garage.takeCar(passengersnumber, baggage,
+                                                                  [](Transport* t){return t->getComfort();});
+                                 else
+                                     m_transport = garage.takeCar(passengersnumber, baggage);
 
-                                 m_transport = garage.takeCar(passengersnumber, baggage);
-                                 std::cout << m_transport->Info();
+                                 if(m_transport)
+                                 {
+                                     std::cout << m_transport->Info() << std::endl;
+                                     std::cout << "Good luck!" << std::endl;
+                                 }
+                                 else
+                                     std::cout << "Transport don't found";
+
                                  break;
                              }
 
+                             case 0:
+                                 break;
+
+                             default:
+                                 break;
+
                          }
                      }
+                     break;
                 }
 
                 case 0:

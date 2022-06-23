@@ -8,6 +8,10 @@ Motorcycle::Motorcycle(std::string tmp_brand, std::string tmp_model, int tmp_wei
     checkInfo();
 }
 
+bool Motorcycle::canTransport(int passengersnumber, int baggage)
+{
+    return passengersnumber <= 2 && baggage <= 15;
+}
 
 std::string Motorcycle::Info() const
 {
@@ -18,11 +22,16 @@ std::string Motorcycle::Info() const
        << "\nMaxSpeed: " << getMaxSpeed()
        << "\nFuel Consumption(per 100 km): " << getFuelConsumption()
        << "\nWeight of " << getBrand() << " is about " << getWeight()
-       << "\nThe presence of a stroller: " << ((strollerPresence == 1) ? "Yes." : "No.");
+       << "\nThe presence of a stroller: " << ((strollerPresence == 1) ? "Yes." : "No.")
+       << "\nComfort: " << getComfort();
 
     return ss.str();
 }
 
 void Motorcycle::checkInfo(){
     Transport::checkInfo();
+}
+
+int Motorcycle::prior() const {
+    return 100;
 }

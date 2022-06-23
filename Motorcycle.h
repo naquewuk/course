@@ -13,6 +13,10 @@ public:
 
     void setStrollerPresence(bool tmp_strollerpresence) { strollerPresence = tmp_strollerpresence; }
 
+    bool canTransport(int passengersnumber, int baggage) override;
+
+    int prior() const override;
+
     std::string Info() const override;
 
 protected:

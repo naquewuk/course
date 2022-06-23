@@ -41,6 +41,9 @@ public:
     void setPassengersNumber(int m_passengers_number) { passengersNumber = m_passengers_number; }
     void setSeatUpholstery(std::string m_seat_upholstery) { seatUpholstery = m_seat_upholstery;}
 
+
+    bool canTransport(int passengersnumber, int baggage) override;
+
     std::string Info() const override;
 
     Body getbody() const { return body; }
@@ -51,6 +54,8 @@ public:
 
     static std::string wichBody(Body m_body);
     static std::string wichSection(Section m_section);
+
+    int prior() const override;
 
 protected:
     void checkInfo() override;

@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
+#include <functional>
 #include "Transport.h"
 #include "Vehicle.h"
 #include "Truck.h"
@@ -29,7 +30,7 @@ public:
 
     int getTransportAmount() const { return availableTransport.size(); }
 
-    Transport* takeCar(int passengersnumber, int baggage) const;
+    Transport* takeCar(int passengersnumber, int baggage, std::function<int(Transport*)> f = [](Transport* t){return t->prior();});
 
 private:
     Vehicle* editVehicle(Vehicle* vehicle);

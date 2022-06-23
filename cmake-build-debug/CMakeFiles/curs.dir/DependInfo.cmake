@@ -16,7 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/UNI/curs/Vehicle.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/Vehicle.cpp.obj"
   "D:/UNI/curs/main.cpp" "D:/UNI/curs/cmake-build-debug/CMakeFiles/curs.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -24,6 +24,10 @@ public:
 
     std::string Info() const override;
 
+    bool canTransport(int passengersnumber, int baggage) override;
+
+    int prior() const override;
+
 protected:
     void checkInfo() override;
 

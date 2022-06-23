@@ -8,8 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/curs.dir/main.cpp.obj"
   "curs.exe"
   "curs.exe.manifest"
+  "curs.lib"
   "curs.pdb"
-  "libcurs.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
